@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Refeições</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <script>
+        function redirecionarIndex(event) {
+            event.preventDefault(); 
+            alert("Refeição cadastrada com sucesso!");
+            window.location.href = "index.html"; 
+        }
+    </script>
+</head>
+<body>
+    <h1>Registro de Refeições</h1>
+    <form onsubmit="redirecionarIndex(event)">        
+        <label for="data_refeicao">Data:</label>
+        <input type="date" id="data_refeicao" name="data_refeicao" required>
+
+        <label for="turma">Turma:</label>
+        <select id="turma" name="turma" required>
+            <option value="1 ANO">1 ANO</option>
+            <option value="2 ANO">2 ANO</option>
+            <option value="3 ANO">3 ANO</option>
+            <option value="4 ANO">4 ANO</option>
+            <option value="5 ANO">5 ANO</option>
+            <option value="6 ANO">6 ANO</option>
+            <option value="7 ANO">7 ANO</option>
+            <option value="8 ANO">8 ANO</option>
+            <option value="9 ANO">9 ANO</option>
+            <option value="10 ANO">10 ANO</option>
+            <option value="11 ANO">11 ANO</option>
+            <option value="12 ANO">12 ANO</option>
+            
+        </select>
+
+        <label for="contagem_alunos">Quantidade de Alunos:</label>
+        <input type="number" id="contagem_alunos" name="contagem_alunos" required>
+
+        <button type="submit">Registrar Refeição</button>
+    </form>
+</body>
+</html>
